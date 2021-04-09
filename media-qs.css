@@ -1,21 +1,25 @@
-@media (max-width: 1230px) {
-	.item {
-		width: 55%;
-	}
-}
-
-@media (max-width: 1023px) {
-	.item {
-		width: 65%;
-	}
-}
-
-@media (max-width: 800px) {
+@media (max-width: 765px) {
 	.item {
 		width: 85%;
 	}
 
 	.header h1 {
 		font-size: 10vw;
+	}
+}
+
+@media (max-width: 480px) {
+	body {
+		font-size: 3.3vw;
+	}
+
+	.item p {
+		line-height: auto;
+	}
+}
+
+@media (min-width: 1367px) {
+	.item {
+		width: 48%;
 	}
 }

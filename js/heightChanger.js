@@ -15,9 +15,11 @@ let whRatio = function() {
 };
 
 let scrollifyActivator = function() {
-	let autoScroll = document.createElement('script');
-	autoScroll.setAttribute('src', 'js/scrollifyConfig.js');
-	body.appendChild(autoScroll);
+	if (w() > 1024) { // Условие активации только на ПК/ноутбуке(1024 ноуты и ПК не попадают)
+		let autoScroll = document.createElement('script');
+		autoScroll.setAttribute('src', 'js/scrollifyConfig.js');
+		body.appendChild(autoScroll);
+	};
 };
 
 let blocks100 = function() {
