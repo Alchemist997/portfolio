@@ -12,20 +12,21 @@ a {
   color: #f2f2f2;
 }
 
-h1, a, p, ul, li {
+h1, a, p {
   margin: 0;
   padding: 0;
 }
 
-ul {
-  list-style: none;
-}
-
 .container {
-  width: 85%;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 /* ============================================================================= Хэдэр */
@@ -37,33 +38,22 @@ ul {
   background-position: center bottom;
 }
 
-.header .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .header h1 {
   font-size: 6vw;
+  padding-bottom: 5%;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
 }
 
 /* ============================================================================= Мои работы */
 
 .item {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 48%;
   text-align: justify;
-  padding-top: 2%;
-  padding-bottom: 1%;
-  box-sizing: border-box;
 }
 
 .item-preview {
-  width: 80%;
+  width: 100%;
+  margin-bottom: 2%;
 }
 
 .item img {
@@ -73,8 +63,9 @@ ul {
 }
 
 .item p {
+  margin-top: 2%;
   line-height: 22px;
-  width: 80%;
+  width: 100%;
   text-indent: 8%;
 }
 
@@ -82,7 +73,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 80%;
+  width: 100%;
 }
 
 .btn {
@@ -93,24 +84,16 @@ ul {
   text-transform: uppercase;
   padding: 12px 2px;
   width: 40%;
-  margin-top: 3%;  
+  margin-top: 2%;  
   background-color: #150715;
   border-radius: 3px;
   box-sizing: border-box;
-}
-
-.btns-wrap .btn {
-  margin-bottom: 2%;
 }
 
 .item a:hover {
   color: rgba(204, 172, 0, 0.95);
   box-shadow: 0 0 3px 2px rgba(204, 172, 0, 0.35);
   transition-duration: 90ms;
-}
-
-.last-btn {
-  margin-top: 2%;
 }
 
 /* ============================================================================= Футер */
@@ -127,6 +110,7 @@ ul {
   display: flex;
   justify-content: space-between;
   width: 320px;
+  padding: 0 10px
 }
 
 .ftr-lnk {
