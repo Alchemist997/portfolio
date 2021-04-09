@@ -26,27 +26,29 @@ let blocks100 = function() {
 	};
 };
 
-let blocks50 = function() {
-	for (let i = 0; i < blocksArr.length; i++) {
-		blocksArr[i].style.minHeight = h()/2 + 'px';
+let header50 = function() {
+	blocksArr[0].style.minHeight = h()/2 + 'px';
+
+	for (let i = 1; i < blocksArr.length; i++) {
+		blocksArr[i].style.minHeight = h() + 'px';
 	};
 };
 
 window.addEventListener('load', function() {
-	if (whRatio() > 1.1) {
+	if (whRatio() > 1) {
 		blocks100(); // Блоки во всю высоту дисплея
 		scrollifyActivator(); // Подключает scrollify
 	} else {
-		blocks50(); // Блоки в пол-дисплея
+		header50(); // Шапка в пол-дисплея
 	};
 	console.log(w()+'x'+h()+', w/h ratio: '+whRatio().toFixed(2));
 });
 
 window.addEventListener('resize', function() {
-	if (whRatio() > 1.1) {
+	if (whRatio() > 1) {
 		blocks100(); // Блоки во всю высоту дисплея		
 	} else {
-		blocks50(); // Блоки в пол-дисплея		
+		header50(); // Шапка в пол-дисплея		
 	};
 	console.log(w()+'x'+h()+', '+whRatio().toFixed(2));
 });
