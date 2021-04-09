@@ -14,12 +14,24 @@
 	}
 
 	.item p {
-		line-height: auto;
+		line-height: 1.16em;
 	}
 }
 
 @media (min-width: 1367px) {
+	body {
+		font-size: 1.2vw;
+	}
+
+	.header h1 {
+		font-size: 6vw;
+	}
+
 	.item {
 		width: 48%;
+	}
+
+	.item p {
+		line-height: 1.16em;
 	}
 }
