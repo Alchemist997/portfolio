@@ -7,7 +7,7 @@ let w = function() {
 };
 
 let h = function() {
-	return document.documentElement.clientHeight;
+	return window.innerHeight;
 };
 
 let whRatio = function() {
