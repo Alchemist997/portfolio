@@ -7,7 +7,7 @@ let w = function() {
 };
 
 let h = function() {
-	return window.innerHeight;
+	return window.innerHeight; // clientHeight не видел панели в Safari iOS
 };
 
 let whRatio = function() {
