@@ -1,8 +1,13 @@
+@media (orientation: portrait) {
+	.container {
+		margin-bottom: 18%;
+	}
+}
+
 @media (max-width: 765px) {
 	.item {
 		width: 85%;
 	}
-
 	.header h1 {
 		font-size: 10vw;
 	}
@@ -12,7 +17,6 @@
 	body {
 		font-size: 3.3vw;
 	}
-
 	.item p {
 		line-height: 1.16em;
 	}
@@ -22,15 +26,12 @@
 	body {
 		font-size: 1.2vw;
 	}
-
 	.header h1 {
 		font-size: 6vw;
 	}
-
 	.item {
 		width: 48%;
 	}
-
 	.item p {
 		line-height: 1.16em;
 	}
@@ -40,18 +41,19 @@
 	.header h1 {
 		filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
 	}
-
 	.btn {
 		padding: 24px 4px;
 	}
-
 	.footer {
 		height: 212px;
 	}
-
+	.ftr-btns-wrap {
+		width: 512px;
+	}
 	.ftr-lnk {
 		width: 128px;
 		height: 128px;
 		border: 4px solid #ffd700;
 		border-radius: 8px;
 	}
+}

@@ -3,11 +3,11 @@ let blocksArr = document.querySelectorAll('.container');
 let body = document.querySelector('body');
 
 let w = function() {
-	return document.documentElement.clientWidth;
+	return window.innerWidth; // Заменено с clientWidth для одновременной сработки с @media portrait
 };
 
 let h = function() {
-	return window.innerHeight; // clientHeight не видел панели в Safari iOS
+	return document.documentElement.clientHeight;
 };
 
 let whRatio = function() {
@@ -28,11 +28,9 @@ let blocks100 = function() {
 	};
 };
 
-let header50 = function() {
-	blocksArr[0].style.minHeight = h()/2 + 'px';
-
-	for (let i = 1; i < blocksArr.length; i++) {
-		blocksArr[i].style.minHeight = h() + 'px';
+let blocks50 = function() {
+	for (let i = 0; i < blocksArr.length; i++) {
+		blocksArr[i].style.minHeight = h()/2 + 'px';
 	};
 };
 
@@ -41,16 +39,16 @@ window.addEventListener('load', function() {
 		blocks100(); // Блоки во всю высоту дисплея
 		scrollifyActivator(); // Подключает scrollify
 	} else {
-		header50(); // Шапка в пол-дисплея
+		blocks50(); // Блоки в пол-дисплея
 	};
 	console.log(w()+'x'+h()+', w/h ratio: '+whRatio().toFixed(2));
 });
 
 window.addEventListener('resize', function() {
 	if (whRatio() > 1) {
-		blocks100(); // Блоки во всю высоту дисплея		
+		blocks100(); // Блоки во всю высоту дисплея
 	} else {
-		header50(); // Шапка в пол-дисплея		
+		blocks50(); // Блоки в пол-дисплея
 	};
 	console.log(w()+'x'+h()+', '+whRatio().toFixed(2));
 });
