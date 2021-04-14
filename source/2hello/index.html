@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Hello App</title>
+	<link type="image/png" sizes="32x32" rel="icon" href="favicon32.png">
+	<link rel="stylesheet" type="text/css" href="styleHello.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+	<header>
+		<section class="container top" id="home">
+			<div class="top-panel">
+				<img src="img/headerLogo.png" class="header-logo" width="91px" height="auto" alt="Logo">
+				<nav>
+					<a href="#home">Home</a>
+					<a href="#about">About</a>
+					<a href="#features">Features</a>
+					<a href="#contact">Contact</a>
+				</nav>
+			</div>
+
+			<article class="head-info">
+				<h1>Hello.</h1>
+
+				<h2>We take mobile photography to a brand new level.</h2>
+
+				<p class="open-sans">With our free app you can take amazing photos straight from your phone.</p>
+
+				<a href="#" class="head-btn get-app-btn" target="_blank">Get the free app</a>
+
+				<a href="#" class="head-btn store-btn" target="_blank" title="App Store"><img src="img/btnAppStore.png" width="194px" height="auto" alt="App Store"></a>
+
+				<a href="#" class="head-btn store-btn" target="_blank" title="Google Play"><img src="img/btnGooglePlay.png" width="194px" height="auto" alt="Google Play"></a>
+			</article>
+
+			<div class="head-iphones-img">
+				<img src="img/iphones-header.png" width="406px" height="auto" alt="iPhones">
+			</div>
+		</section>
+	</header>
+
+<!-- =============================================== О компании =============================================== -->
+
+	<section class="container about-wrap" id="about">
+
+		<div class="about-us-img">
+			<img src="img/iphone.png" width="100%" height="auto" alt="iPhone">
+		</div>
+
+		<div class="about-us-text">
+			<h3>About Us</h3>
+
+			<input type="radio" id="btn1" name="toggle" checked>
+			<input type="radio" id="btn2" name="toggle">
+			<input type="radio" id="btn3" name="toggle">
+
+			<p class="open-sans about-1">Despreneur is a magazine about design, technology and entrepreneurship. Nowadays designers play major roles in successful startups and established companies. A Despreneur, coined by us, is  a new breed of human being – a designer with entrepreneurial mindset.</p>
+
+			<p class="open-sans about-2">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+			<p class="open-sans about-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+
+			<div class="toggles-wrap">
+				<label for="btn1"></label>
+				<label for="btn2"></label>
+				<label for="btn3"></label>
+			</div>
+		</div>
+	</section>
+
+	<div class="line"></div>
+
+<!-- =============================================== 3-й блок с фото =============================================== -->
+
+	<section class="features" id="features">
+
+		<div class="btns-area">
+			<div class="btns-wrap">
+				<label>Macro <input type="radio" name="toggle2"></label>
+				<label>Filters <input type="radio" name="toggle2"></label>
+				<label>Sharing <input type="radio" name="toggle2"></label>
+			</div>
+		</div>
+
+		<div class="items-wrap">
+			<figure>
+				<img src="img/macro.jpg" alt="Мох в лесу">
+				<figcaption>
+					<h1>Macro photography</h1>
+					<h2>No more expensive lenses and heavy editing in Photoshop.</h2>
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="img/filters.jpg" alt="Тёмные очки в женской руке">
+				<figcaption>
+					<h1>Filters</h1>
+					<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="img/sharing.jpg" alt="Дольки яблока в руках">
+				<figcaption>
+					<h1>Sharing</h1>
+					<h2>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+				</figcaption>
+			</figure>
+		</div>
+	</section>
+
+<!-- =============================================== Контакты =============================================== -->
+
+	<section class="container contact" id="contact">
+		<ul class="members-list">
+			<li class="member">
+				<img src="img/member1.jpg" alt="Bryan Jones" width="120px" height="120px">
+				<div class="member-text">
+					<p class="member-name open-sans">Bryan Jones</p>
+					<p class="member-info open-sans">Wannabe travel fanatic. Food buff. Internet ninja. Unapologetic web practitioner. Tvaholic. Alcohol scholar.</p>
+				</div>
+			</li>
+
+			<li class="member">
+				<img src="img/member2.jpg" alt="Sarah Thompson" width="120px" height="120px">
+				<div class="member-text">
+					<p class="member-name open-sans">Sarah Thompson</p>
+					<p class="member-info open-sans">Infuriatingly humble student. Bacon scholar. Freelance communicator. Social media enthusiast.</p>
+				</div>
+			</li>
+		</ul>
+
+		<div class="contact-right">
+			<h3>Contact Us</h3>
+			<p class="open-sans">Here on the left you can see our team which makes things happen.<br><br>
+			If you have any questions, suggestions or want to contribute, please contact Despreneur at hi[at]despreneur.com. We’ll get back to you as soon as possible.</p>
+		</div>
+	</section>
+
+<!-- =============================================== Футер =============================================== -->
+
+	<div class="line-footer"></div>
+
+	<footer class="container">
+		<div class="left-links">
+			<p>© 2021 Photography App</p>
+			<a href="#home">Home</a>
+			<a href="#">Press</a>
+			<a href="#">FAQ</a>
+			<a href="#">Blog</a>
+			<a href="#">Terms</a>
+			<a href="#">Privacy</a>
+		</div>
+
+		<div class="right-links">
+			<a href="#">Instagram</a>
+			<a href="#">Twitter</a>
+			<a href="#">Facebook</a>
+		</div>
+	</footer>
+
+<script src="slider.js"></script>
+</body>
+</html>
