@@ -1,6 +1,5 @@
-console.log('heightChanger ENABLED');
+console.log('heightChanger READY');
 let blocksArr = document.querySelectorAll('.container');
-let body = document.querySelector('body');
 
 let w = function() {
 	return window.innerWidth; // Заменено с clientWidth для одновременной сработки с @media portrait
@@ -16,9 +15,19 @@ let whRatio = function() {
 
 let scrollifyActivator = function() {
 	if (w() > 1024) { // Условие активации только на ПК/ноутбуке(1024 ноуты и ПК не попадают)
-		let autoScroll = document.createElement('script');
-		autoScroll.setAttribute('src', 'js/scrollifyConfig.js');
-		body.appendChild(autoScroll);
+		let jq = document.createElement('script');
+		jq.src = 'js/jquery.3.1.1.min.js';
+		jq.async = false;
+		
+		let scrlf = document.createElement('script');
+		scrlf.src = 'js/jquery.scrollify.min.js';
+		scrlf.async = false;
+
+		let scrollConfig = document.createElement('script');
+		scrollConfig.src = 'js/scrollifyConfig.js';
+		scrollConfig.async = false;
+
+		document.body.append(jq, scrlf, scrollConfig);
 	};
 };
 
@@ -34,7 +43,7 @@ let blocks50 = function() {
 	};
 };
 
-window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
 	if (whRatio() > 1) {
 		blocks100(); // Блоки во всю высоту дисплея
 		scrollifyActivator(); // Подключает scrollify

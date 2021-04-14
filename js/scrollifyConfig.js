@@ -1,4 +1,4 @@
-console.log('Scrollify ON');
+console.log('Scrollify READY');
 
 $.scrollify({
 	section: ".container",
