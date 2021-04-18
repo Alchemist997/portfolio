@@ -10,6 +10,8 @@ let headerlinks = document.querySelectorAll('.header-nav a');
 let articleInfo = document.querySelectorAll('.article-info');
 let h1 = document.querySelector('.main h1');
 let mainP = document.querySelector('.main p');
+let btnsWrap = document.querySelector('.slider-btns');
+let btns = btnsWrap.querySelectorAll('.slider-btn');
 
 // Элементы для уменьшения при <488
 let mainBtn1 = document.querySelector('.main-btn'); // Для удаления отступа
@@ -40,6 +42,14 @@ let headerBlogResize = function() {
 	h1.style.fontSize = '6vw';
 	mainP.style.fontSize = '16px';
 	console.log('headerBlogResize ON')
+};
+
+let btnResize = function() {
+	btnsWrap.style.width = '192px';
+	for (let i = 0; i < btns.length; i++) {
+		btns[i].style.width = '45px';
+		btns[i].style.height = '45px';
+	};
 };
 
 let smallDisplay = function() {
@@ -73,6 +83,7 @@ window.addEventListener('load', function() {
 
 	if (width < 1000) {
 		headerBlogResize();
+		btnResize();
 	};
 
 	if (width < 488) {
@@ -86,6 +97,14 @@ let between = function() {
 	portfolio.style.justifyContent = 'space-between';
 	prices.style.justifyContent = 'space-between';
 	team.style.justifyContent = 'space-between';
+};
+
+let btnReturn = function() {
+	btnsWrap.style.width = '64px';
+	for (let i = 0; i < btns.length; i++) {
+		btns[i].style.width = '15px';
+		btns[i].style.height = '15px';
+	};
 };
 
 let smallDisplayDisable = function() {
@@ -122,7 +141,9 @@ window.addEventListener('resize', function() {
 
 	if (width < 1000) {
 		headerBlogResize();
+		btnResize();
 	} else {
+		btnReturn();
 		headerLogo.style.width = '200px';
 		h1.style.fontSize = '60px';
 		mainP.style.fontSize = '22px';

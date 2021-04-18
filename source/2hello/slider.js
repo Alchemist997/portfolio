@@ -3,9 +3,9 @@ let inputs = features.querySelectorAll('input');
 let labels = features.querySelectorAll('label');
 let items = features.querySelectorAll('figure');
 
-for (let j = 0; j < inputs.length; j++) {
-	inputs[j].onchange = function () {
-		for (let i = 0; i < inputs.length; i++) {
+for (let i = 0; i < inputs.length; i++) {
+	inputs[i].onchange = function () {
+		for (i = 0; i < inputs.length; i++) {
 			if (inputs[i].checked) {
 				labels[i].style.backgroundColor = '#cacdcf';
 				labels[i].style.color = '#ffffff';
