@@ -463,6 +463,10 @@
     margin-bottom: 30px;
   }
 
+  .slider-btns input {
+    display: none;
+  }
+
   .slider-btn {
     display: block;
     cursor: pointer;
@@ -472,7 +476,7 @@
     background-color: #00897b;
   }
 
-  .active-slider {
+  .slider-btn:first-child {
     background-color: #3949ab;
   }
 
