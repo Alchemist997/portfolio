@@ -2,8 +2,9 @@
   body {
     margin: 0;
     padding:0;
-    font-family:"Arial", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 15px;
+    font-weight: 600;
   }
 
   a {
@@ -37,6 +38,7 @@
 
   .block-description {
     /*width: 53.84%;*/
+    font-weight: normal;
     padding: 0 23.077%;
     margin: 0 auto;
     margin-bottom: 110px;
@@ -48,6 +50,7 @@
     justify-content: center;
     align-items: center;
     height: 70px;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -131,6 +134,7 @@
 
   main p {
     font-size: 22px;
+    font-weight: normal;
     margin-top: 35px;
     margin-bottom: 100px;
   }
@@ -186,6 +190,10 @@
     font-size: 20px;
   }
 
+  .item-info {
+    font-weight: normal;
+  }
+
 /* ====================================================================================== Наши сервисы */
 
   .services {
@@ -233,6 +241,7 @@
   }
 
   .readmore-btn {
+    font-family: 'Open Sans', sans-serif;
     height: 60px;
     border-color: #000000;
     margin-top: 45px;
@@ -258,6 +267,7 @@
   }
 
   .portfolio-btn {
+    font-family: 'Open Sans', sans-serif;
     width: 180px;
     height: 60px;
     border-color: #00897b;
@@ -341,6 +351,7 @@
     padding-bottom: 60px;
     margin-bottom: 30px;
     width: 370px;
+    font-weight: normal;
     background-color: #ffffff;
     background-image: linear-gradient(-5deg, transparent 488.9px, #3949ab 490px);
   }
@@ -364,6 +375,7 @@
 
   .price-value {
     font-size: 50px;
+    line-height: 50px;
     letter-spacing: 3px;
     margin-bottom: 100px;
     color: #ffffff;
@@ -372,11 +384,15 @@
   .price-value::after {
     content: "per month";
     font-size: 15px;
-    letter-spacing: 0;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    position: relative;
+    top: -4px;
   }
 
   .price-component {
     font-size: 17px;
+    font-weight: lighter;
     color: #212121;
     width: 180px;
     text-align: center;
@@ -390,6 +406,7 @@
   }
 
   .price-btn {
+    font-family: 'Open Sans', sans-serif;
     height: 60px;
     width: 180px;
     border-color: #000000;
@@ -428,6 +445,10 @@
   .member-name {
     font-size: 20px;
     margin-bottom: 10px;
+  }
+
+  .post {
+    font-weight: normal;
   }
 
   .team-social-btns-wrap {
@@ -530,9 +551,12 @@
   .article-title {
     grid-area: title;
     font-size: 25px;
-    color: #00897b;
     align-self: end;
     justify-self:start;
+  }
+
+  .article-title:hover {
+    color: #00897b;
   }
 
   .article-date::before, .article-category::before{
@@ -558,6 +582,7 @@
   }
 
   .article-description {
+    font-weight: normal;
     grid-area: description;
     align-self: start;
   }
@@ -589,9 +614,9 @@
   }
 
   .contacts-item p, .contacts-item a {
-    font-weight: bold;
-    color: #ffffff;
+    font-size: 22px;
     line-height: 28px;
+    color: #ffffff;
   }
 
   .contact-img {
@@ -654,4 +679,5 @@ footer::after {
   padding-top: 21px;
   background-color: #ffffff;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
