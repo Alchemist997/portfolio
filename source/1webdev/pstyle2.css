@@ -5,6 +5,9 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     font-weight: 600;
+    -webkit-text-size-adjust: none; /* Фикс для Safari iOS */
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
   }
 
   a {
