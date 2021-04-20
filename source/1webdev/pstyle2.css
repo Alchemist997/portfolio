@@ -206,6 +206,8 @@
   .services-list {
     display: grid;
     width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-column-gap: 30px;
   }
