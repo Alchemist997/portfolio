@@ -37,7 +37,6 @@
   }
 
   .block-description {
-    /*width: 53.84%;*/
     font-weight: normal;
     padding: 0 23.077%;
     margin: 0 auto;
@@ -169,12 +168,12 @@
 
   .about-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .about-item {
-    /*width: 250px;*/
-    width: 21.37%;
+    width: 250px;
     /*padding: 30px 60px;*/
     padding: 30px 5.1%;
   }
@@ -538,8 +537,7 @@
     /*width: 570px;*/
     width: 48.72%;
     display: grid;
-    /*grid-template-columns: 170px 1fr 120px;*/
-    grid-template-columns: 29.82% 1fr 21%;
+    grid-template-columns: 170px 1fr 21%;
     /*grid-template-rows: 100px 50px 1fr;*/
     grid-template-rows: 25% 12.5% 1fr;
     grid-template-areas:
@@ -587,7 +585,7 @@
     align-self: start;
   }
 
-  .blog div .btn:last-child {
+  .blog .container .btn:last-child {
     margin-bottom: 30px;
   }
 

@@ -1,0 +1,103 @@
+@media (max-width: 1277px) {
+  .portfolio-wrap, .pricelist-wrap, .team-list, .about-list {
+    justify-content: space-around;
+  }
+
+  .block-description {
+    margin-bottom: 9.4%;
+  }
+
+  .portfolio-buttons, .articles-wrap {
+    margin-bottom: 10.2%;
+  }
+
+  .portfolio-wrap, .team-list {
+    margin-bottom: 7.7%;
+  }
+
+  .contacts-item {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-logo img {
+    width: 150px;
+  }
+
+  .header-nav a {
+    margin-left: 20px;
+    font-size: 26px;
+    padding: 10px 0;
+  }
+
+  .main h1 {
+    font-size: 6vw;
+  }
+
+  .main p {
+    font-size: 16px;
+  }
+
+  .slider-btns {
+    width: 128px;
+  }
+
+  .slider-btn {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 850px) {
+
+  .block-description {
+    padding: 0 7%;
+  }
+
+  .portfolio-item {
+    width: 85%;
+    background-position: center;
+  }
+
+  .blog-article {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7%;
+  }
+
+  .blog-article:nth-child(even) .article-img {
+    order: 0;
+  }
+
+  .article-info {
+    width: 70%;
+    grid-template-columns: 140px 1fr;
+  }
+
+  .article-img {
+    width: 70%;
+    padding-bottom: 49.12%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 515px) {
+  .main-btn:first-of-type {
+    margin-right: 0;
+  }
+
+  .article-title {
+    font-size: 6vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .article-date::before, .article-category::before{
+    display: none;
+  }
+
+  .article-info {
+  	grid-template-columns: 50% 50%;
+  }
+}
