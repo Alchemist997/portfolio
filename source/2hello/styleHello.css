@@ -89,7 +89,7 @@
 		background-image: url(img/BGheaderHello.jpg);
 		background-repeat: no-repeat;
 		background-position: center top;
-		background-size: contain cover;
+		background-size: 1600px;
 		overflow: hidden;
 		color: #ffffff;
 	}
@@ -445,17 +445,3 @@
 	footer a::before {
 		content: "∙ ";
 	}
-
-@media (min-width: 1800px) { /* Белые поля для ширины 1920px */
-	header {
-		background-image: url(img/BGheaderHello.jpg),
-			linear-gradient(to left, transparent 90%, #ffffff 90%),
-			linear-gradient(to right, transparent 90%, #ffffff 90%);
-	}
-
-	.items-wrap {
-		background-image:
-			linear-gradient(to left, transparent 90%, #ffffff 90%),
-			linear-gradient(to right, transparent 90%, #ffffff 90%);
-	}
-}
