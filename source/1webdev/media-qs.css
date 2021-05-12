@@ -22,21 +22,20 @@
 
 @media (max-width: 1024px) {
   .header-logo img {
-    width: 150px;
+    width: 175px;
+  }
+
+  .header-nav {
+  	margin-right: 20px;
   }
 
   .header-nav a {
-    margin-left: 20px;
-    font-size: 26px;
-    padding: 10px 0;
+    margin-left: 25px;
+    padding: 8px 0;
   }
 
   .main h1 {
     font-size: 6vw;
-  }
-
-  .main p {
-    font-size: 16px;
   }
 
   .slider-btns {
@@ -50,6 +49,10 @@
 }
 
 @media (max-width: 850px) {
+
+  .main p {
+    font-size: 16px;
+  }
 
   .block-description {
     padding: 0 7%;

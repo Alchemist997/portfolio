@@ -429,6 +429,7 @@
     width: 100%;
     overflow: hidden;
     margin-bottom: 90px;
+    position: relative
   }
 
   .team-member {
@@ -453,6 +454,38 @@
 
   .post {
     font-weight: normal;
+  }
+
+  .team-list:hover .prev,
+  .team-list:hover .next {
+    opacity: 0.7;
+  }
+
+  .prev, .next {
+    user-select: none;
+    -webkit-user-select: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 323px;
+    line-height: 323px;
+    font-size: 100px;
+    font-weight: 300;
+    vertical-align: middle;
+    transform: scaleX(0.6);
+    color: #000;
+    text-shadow: 0 0 5px #fff;
+    opacity: 0;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+
+  .prev {
+    left: -7px;
+  }
+
+  .next {
+    right: -7px;
   }
 
   .team-social-btns-wrap {
@@ -657,6 +690,7 @@
   }
 
   .send-btn {
+    -webkit-appearance: none;
     grid-column: span 2;
     justify-self: end;
     margin-top: 10px;

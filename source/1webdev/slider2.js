@@ -7,6 +7,9 @@ let preArr = itemsWrap.querySelectorAll('.team-member');
 let array = Array.from(preArr);
 let slicedList = [];
 
+let prev = itemsWrap.querySelector('.prev');
+let next = itemsWrap.querySelector('.next');
+
 window.addEventListener('DOMContentLoaded', function() {
 	for (let i = 3; i < preArr.length; i++) {
 		preArr[i].style.display = 'none';
@@ -37,6 +40,22 @@ for (let i = 0; i < inputs.length; i++) {
 				for (let j = 0; j < slicedList[i].length; j++) {
 					slicedList[i][j].style.display = 'none';				
 				};
+			};
+		};
+	};
+
+	prev.onclick = function() {
+		for (let i = 0; i < inputs.length; i++) {
+			if (inputs[i].checked && i-1 >= 0) {
+				inputs[i-1].click();
+			};
+		};
+	};
+
+	next.onclick = function() {
+		for (let i = inputs.length-1; i >= 0 ; i--) {
+			if (inputs[i].checked && i+1 < inputs.length) {
+				inputs[i+1].click();
 			};
 		};
 	};
