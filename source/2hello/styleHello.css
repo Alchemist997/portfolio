@@ -364,6 +364,42 @@
 		filter: drop-shadow(0 0 2px #000000);
 	}
 
+	  .items-wrap:hover .prev,
+	  .items-wrap:hover .next {
+	    opacity: 0.7;
+	  }
+
+	  .prev, .next {
+	    user-select: none;
+	    -webkit-user-select: none;
+	    display: block;
+	    position: absolute;
+	    top: 0;
+	    height: 505px;
+	    line-height: 505px;
+	    font-size: 100px;
+	    font-weight: 300;
+	    vertical-align: middle;
+	    transform: scaleX(0.6);
+	    color: #000;
+	    text-shadow: 0 0 5px #fff;
+	    opacity: 0;
+	    cursor: pointer;
+	    transition-duration: 0.3s;
+	  }
+
+	  .prev {
+	    left: -70px;
+	    padding-left: 130px;
+	    padding-right: 130px;
+	  }
+
+	  .next {
+	    right: -70px;
+	    padding-left: 130px;
+	    padding-right: 130px;
+	  }
+
 /* =============================================== Контакты =============================================== */
 
 	.contact {
