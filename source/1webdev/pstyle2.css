@@ -276,6 +276,7 @@
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
+    align-items: flex-start; /* Для Safari iOS */
     width: 370px;
     min-height: 220px;
     background-color: gray;
@@ -283,7 +284,6 @@
 
   .portfolio-img {
     width: 100%;
-    height: auto;
     object-fit: cover;
   }
 
