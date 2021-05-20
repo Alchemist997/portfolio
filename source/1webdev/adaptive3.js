@@ -10,8 +10,6 @@ let services = document.querySelector('.services .container')
 
 	let adaptive = function () {
 		for (let i = 0; i < containers.length; i++) {
-			containers[i].style.width = '95.2%';
-
 			if (i > 0) { // Условие для пропуска хэдэра
 				containers[i].style.paddingTop = '10%';
 				containers[i].style.paddingBottom = '7.7%';
@@ -22,11 +20,9 @@ let services = document.querySelector('.services .container')
 
 	let static = function () {
 		for (let i = 0; i < containers.length; i++) {
-			containers[i].style.width = '1170px';
-
 			if (i > 0) { // Условие для пропуска хэдэра
-				containers[i].style.paddingTop = '120px';
-				containers[i].style.paddingBottom = '90px';
+				containers[i].style.removeProperty('padding-top');
+				containers[i].style.removeProperty('padding-bottom');
 			};
 		};
 		console.log('adavtive OFF')
@@ -41,7 +37,7 @@ let services = document.querySelector('.services .container')
 	let normalWidth = function() {
 		name.placeholder = 'Your NAME';
 		email.placeholder = 'Your Email';
-		services.style.width = '95.2%';		
+		services.style.removeProperty('width');
 	};
 
 // ===================================================================================

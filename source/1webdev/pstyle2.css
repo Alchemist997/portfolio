@@ -2,6 +2,7 @@
   body {
     margin: 0;
     padding:0;
+    background-color: #fdfdff;
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
     font-weight: 600;
@@ -27,16 +28,18 @@
   h2 {
     font-size: 30px;
     margin-top: 0px;
+    text-align: center;
   }
 
   .container {
     box-sizing: border-box;
-    width: 1170px;
-    /*width: 83.57%;*/
+    max-width: 1210px;
     min-height: 670px;
     margin: 0 auto;
     padding-top: 120px;
     padding-bottom: 90px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .block-description {
@@ -63,7 +66,7 @@
 
   .btn:hover {
     background-color: #00897b;
-    color: #ffffff;
+    color: #fdfdff;
   }
 
 /* ====================================================================================== Шапка */
@@ -71,7 +74,7 @@
   .header {
     display: flex;
     align-items: center;
-    min-height: 120px;
+    min-height: 100px;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -91,12 +94,7 @@
   .header-logo img {
     width: 200px;
     height: auto;
-    max-height: 120px;
-    filter: grayscale(1);
-  }
-
-  .header-logo:hover img {
-    filter: grayscale(0);
+    max-height: 100px;
   }
 
   .header-nav a {
@@ -122,12 +120,13 @@
     background-color: #0a090d;
     background-image: url(img/back-top.jpg);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     text-align: center;
   }
 
   main h1, main p, main a {
-    color: #ffffff;
+    color: #fdfdff;
   }
 
   main h1 {
@@ -142,7 +141,7 @@
   }
 
   .main-btn {
-    border: 2px solid #ffffff;
+    border: 2px solid #fdfdff;
     margin-right: 20px;
     margin-bottom: 20px;
   }
@@ -163,22 +162,28 @@
     height: auto;
   }
 
-/* ====================================================================================== О компании */
+/* ====================================================================================== Наши сервисы */
 
-  .about {
+  .services {
+    background-color: #e8e8e8;
     text-align: center;
   }
 
-  .about-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .services-list {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-column-gap: 30px;
   }
 
-  .about-item {
-    width: 250px;
-    /*padding: 30px 60px;*/
-    padding: 30px 5.1%;
+  .services-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: #fdfdff;
+    padding: 60px 50px;
+    margin-bottom: 30px;
   }
 
   .item-img {
@@ -196,32 +201,6 @@
     font-weight: normal;
   }
 
-/* ====================================================================================== Наши сервисы */
-
-  .services {
-    background-color: #e4fdf9;
-    text-align: center;
-  }
-
-  .services-list {
-    display: grid;
-    width: 100%;
-    max-width: 1170px;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-column-gap: 30px;
-  }
-
-  .services-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    padding: 60px 50px;
-    margin-bottom: 30px;
-  }
-
   .services-item:hover {
     box-shadow: 0 5px 20px -5px #000000;
   }
@@ -232,7 +211,7 @@
 
   .services-item:hover {
     background-color: #00897b;
-    color: #ffffff;
+    color: #fdfdff;
   }
 
   .services-item:hover img {
@@ -240,8 +219,8 @@
   }
 
   .services-item:hover .btn {
-    border-color: #ffffff;
-    color: #ffffff;
+    border-color: #fdfdff;
+    color: #fdfdff;
   }
 
   .readmore-btn {
@@ -253,7 +232,8 @@
   }
 
   .readmore-btn:hover {
-    box-shadow: inset 0 0 2px 1px;
+    border:none;
+    transform: scale(1.2);
   }
 
 /* ====================================================================================== Последние работы */
@@ -292,14 +272,19 @@
   }
 
   .portfolio-item {
+    position: relative;
     margin-bottom: 30px;
-    display: block;
+    display: flex;
+    justify-content: center;
     width: 370px;
-    height: 370px;
+    height: auto;
+    min-height: 220px;
     background-color: gray;
-    background-image: url(img/wheel.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  }
+
+  .portfolio-img {
+    width: 100%;
+    object-fit: cover;
   }
 
   .pflio-item-name {
@@ -307,13 +292,18 @@
   }
 
   .hidden-description {
-    color: #ffffff;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    color: #fdfdff;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.65);
     opacity: 0;
     transition: 0.25s;
@@ -337,7 +327,7 @@
 /* ====================================================================================== Блок с ценами */
 
   .prices {
-    background-color: #f0f1f1;
+    background-color: #e8e8e8;
   }
 
   .pricelist-wrap {
@@ -356,7 +346,7 @@
     margin-bottom: 30px;
     width: 370px;
     font-weight: normal;
-    background-color: #ffffff;
+    background-color: #fdfdff;
     background-image: linear-gradient(-5deg, transparent 488.9px, #3949ab 490px);
   }
 
@@ -367,7 +357,7 @@
   .price-name {
     font-size: 25px;
     margin-bottom: 30px;
-    color: #ffffff;
+    color: #fdfdff;
   }
 
   .price-value::before {
@@ -382,7 +372,7 @@
     line-height: 50px;
     letter-spacing: 3px;
     margin-bottom: 100px;
-    color: #ffffff;
+    color: #fdfdff;
   }
 
   .price-value::after {
@@ -494,24 +484,33 @@
   }
 
   .team-social-btn {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
     border-radius: 5px;
-    background-color: #f0f1f1;
+    background-color: #e8e8e8;
     margin-right: 20px;
-    background-image: url(img/sprite.png);
-    background-repeat: no-repeat;
-    background-position: 8px -112px;
-  }
-
-  .team-social-btn:hover {
-    background-color: #3949ab;
-    background-position: 6px -52px;
+    transition-duration: 0.1s;
   }
 
   .team-social-btns-wrap li:last-child a {
     margin-right: 0;
+  }
+
+  .team-social-btn:hover {
+    background-color: #3949ab;
+  }
+
+  .social-btn-img {
+    fill: #00897b;
+    width: 60%;
+    transition-duration: 0.1s;
+  }
+
+  .team-social-btn:hover .social-btn-img {
+    fill: #fff;
   }
 
   .slider-btns {
@@ -541,7 +540,7 @@
 /* ====================================================================================== БЛОГ */
 
   .blog {
-    background-color: #e4fdf9;
+    background-color: #e8e8e8;
   }
 
   .articles-wrap {
@@ -556,19 +555,19 @@
     justify-content: space-between;
   }
 
-  .blog-article:nth-child(even) .article-img {
+  .blog-article:nth-child(even) .article-img-wrap {
     order: 1;
   }
 
-  .article-img {
+  .article-img-wrap {
     display: block;
-    /*width: 570px;*/
+    font-size: 0;
     width: 48.72%;
-    padding-bottom: 34.19%; /* Для сохранения пропорций изображения 570x400 */
-    background-image: url(img/wheel.jpg);
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    background-color: gray;
+  }
+
+  .article-img-wrap img {
+    width: 100%;
   }
 
   .article-info {
@@ -576,7 +575,6 @@
     width: 48.72%;
     display: grid;
     grid-template-columns: 170px 1fr 21%;
-    /*grid-template-rows: 100px 50px 1fr;*/
     grid-template-rows: 25% 12.5% 1fr;
     grid-template-areas:
     "title title"
@@ -630,11 +628,11 @@
 /* ====================================================================================== КОНТАКТЫ */
 
   footer {
-    background: #0a090d url(img/back-top.jpg);
+    background: #0a090d url(img/back-bottom.jpg);
   }
 
   .footer {
-    color: #ffffff;
+    color: #fdfdff;
   }
 
   .contacts-wrap {
@@ -652,19 +650,22 @@
   .contacts-item p, .contacts-item a {
     font-size: 22px;
     line-height: 28px;
-    color: #ffffff;
+    color: #fdfdff;
   }
 
-  .contact-img {
+  .contact-img-wrap {
     width: 105px;
     height: 105px;
     border-radius: 50%;
     background-color: #3949ab;
-    background-image: url(img/contact.png);
-    background-size: 66%;
-    background-repeat: no-repeat;
-    background-position: center;
     margin-bottom: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-img {
+    max-width: 60%;
   }
 
 /* ================================================ ФОРМА */
@@ -683,6 +684,8 @@
     border-radius: 10px;
     border-color: transparent;
     min-width: 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 26px;
   }
 
   .textarea {
@@ -694,10 +697,11 @@
     grid-column: span 2;
     justify-self: end;
     margin-top: 10px;
-    padding: 0;
-    line-height: 20px;
-    background-color: #ffffff;
+    padding: 0!important;
+    line-height: 20px!important;
+    background-color: #fdfdff;
     border: none;
+    font-family: 'Roboto', sans-serif!important;
   }
 
   .send-btn:hover {
@@ -714,7 +718,7 @@ footer::after {
   font-size: 20px;
   line-height: 22px;
   padding-top: 21px;
-  background-color: #ffffff;
+  background-color: #fdfdff;
   text-align: center;
   font-family: 'Roboto', sans-serif;
 }

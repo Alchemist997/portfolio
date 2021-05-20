@@ -1,6 +1,11 @@
 @media (max-width: 1277px) {
-  .portfolio-wrap, .pricelist-wrap, .team-list, .about-list {
+  .portfolio-wrap, .pricelist-wrap, .team-list {
     justify-content: space-around;
+  }
+
+  .portfolio-item, .price-item, .team-member {
+    margin-left: 3px;
+    margin-right: 3px;
   }
 
   .block-description {
@@ -59,8 +64,7 @@
   }
 
   .portfolio-item {
-    width: 85%;
-    background-position: center;
+    width: 75%;
   }
 
   .blog-article {
@@ -69,18 +73,17 @@
     margin-bottom: 7%;
   }
 
-  .blog-article:nth-child(even) .article-img {
+  .blog-article:nth-child(even) .article-img-wrap {
     order: 0;
   }
 
   .article-info {
-    width: 70%;
+    width: 75%;
     grid-template-columns: 140px 1fr;
   }
 
-  .article-img {
-    width: 70%;
-    padding-bottom: 49.12%;
+  .article-img-wrap {
+    width: 75%;
     margin-bottom: 10px;
   }
 }
@@ -96,6 +99,9 @@
 }
 
 @media (max-width: 450px) {
+  .services-list {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
   .article-date::before, .article-category::before{
     display: none;
   }
